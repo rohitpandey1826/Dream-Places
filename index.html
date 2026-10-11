@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Places</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <header>
+      <h1>🌍 Dream Places</h1>
+      <p>Want to Visit Before I Die</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="progress-card">
+        <div class="progress-header">
+          <h3>Overall Progress</h3>
+          <span id="progressText">0 / 0 Completed</span>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Overall travel progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="card"><h2 id="totalPlaces">0</h2><span>Total Places</span></div>
+        <div class="card"><h2 id="visitedPlaces">0</h2><span>Visited</span></div>
+        <div class="card"><h2 id="remainingPlaces">0</h2><span>Remaining</span></div>
+      </div>
+    </section>
+
+    <section class="planner-widget" aria-label="Spiritual route planner">
+      <button type="button" id="plannerToggle" class="planner-toggle" aria-expanded="false" aria-controls="tripPlanner">
+        <span class="planner-toggle-icon"><i class="fa-solid fa-route"></i></span>
+        <span class="planner-toggle-text">
+          <strong>Smart Spiritual Route Finder</strong>
+          <small>Plan your sacred journey</small>
+        </span>
+        <i id="plannerArrow" class="fa-solid fa-chevron-down planner-arrow" aria-hidden="true"></i>
+      </button>
+
+      <section class="trip-planner" id="tripPlanner" hidden>
+      <div class="planner-heading">
+        <div class="planner-eyebrow"><i class="fa-solid fa-route"></i> PLAN YOUR PILGRIMAGE</div>
+        <h2>Smart Spiritual Route Finder</h2>
+        <p>Find sacred places to consider on your journey, identify detours, and open your selected route in Google Maps.</p>
+      </div>
+      <form id="tripForm" class="trip-form">
+        <label>Starting point
+          <input id="tripStart" list="tripPlaces" value="Pune, Maharashtra" placeholder="e.g. Pune" required>
+        </label>
+        <label>Main destination
+          <input id="tripDestination" list="tripPlaces" value="Kedarnath, Rudraprayag, Uttarakhand" placeholder="e.g. Kedarnath" required>
+        </label>
+        <label>Trip duration
+          <select id="tripDuration">
+            <option value="3">3 days</option><option value="5" selected>5 days</option><option value="7">7 days</option><option value="10">10 days</option><option value="15">15 days</option>
+          </select>
+        </label>
+        <button class="planner-submit" type="submit"><i class="fa-solid fa-wand-magic-sparkles"></i> Find Spiritual Stops</button>
+      </form>
+      <datalist id="tripPlaces"></datalist>
+      <div id="tripResults" class="trip-results" aria-live="polite">
+        <div class="planner-empty"><i class="fa-solid fa-mountain-sun"></i><span>Choose your route to discover suggested pilgrimage stops.</span></div>
+      </div>
+      </section>
+    </section>
+
+    <section class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search Temple, Place or State..." aria-label="Search temples, places or states">
+    </section>
+    <div id="categories"></div>
+    <footer>Keep Dreaming • Keep Travelling • Keep Exploring ✈️</footer>
+  </div>
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

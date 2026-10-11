@@ -1,0 +1,1337 @@
+/* ==========================================
+
+   GOOGLE FONT & RESET
+
+\========================================== */
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #081229;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* ==========================================
+
+   BACKGROUND
+
+\========================================== */
+
+
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+
+        radial-gradient(circle at top left, #2563eb 0%, transparent 35%),
+
+        radial-gradient(circle at bottom right, #06b6d4 0%, transparent 25%),
+
+        linear-gradient(135deg, #081229, #0f172a, #111827);
+
+}
+
+
+
+/* ==========================================
+
+   CONTAINER
+
+\========================================== */
+
+
+
+.container {
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 40px 0 80px;
+
+}
+
+
+
+/* ==========================================
+
+   HEADER
+
+\========================================== */
+
+
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+header h1 {
+
+    font-size: 56px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+header p {
+
+    font-size: 22px;
+
+    color: #cbd5e1;
+
+    font-weight: 400;
+
+}
+
+
+
+/* ==========================================
+
+   DASHBOARD
+
+\========================================== */
+
+
+
+.dashboard {
+
+    margin-bottom: 35px;
+
+}
+
+
+
+/* ==========================================
+
+   PROGRESS CARD
+
+\========================================== */
+
+
+
+.progress-card {
+
+    background: rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.progress-header h3 {
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+}
+
+
+
+.progress-header span {
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ==========================================
+
+   PROGRESS BAR
+
+\========================================== */
+
+
+
+.progress {
+
+    width: 100%;
+
+    height: 18px;
+
+    border-radius: 30px;
+
+    background: #1e293b;
+
+    overflow: hidden;
+
+}
+
+
+
+\#progressFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 30px;
+
+    background: linear-gradient(90deg, #22c55e, #3b82f6);
+
+    transition: .5s ease;
+
+    animation: progressAnimation 1.2s ease;
+
+}
+
+
+
+@keyframes progressAnimation {
+
+    from {
+
+        width: 0%;
+
+    }
+
+}
+
+
+
+/* ==========================================
+
+   STATS
+
+\========================================== */
+
+
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+
+
+.card {
+
+    background: rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    padding: 28px;
+
+    transition: .3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+
+
+.card h2 {
+
+    font-size: 42px;
+
+    color: #38bdf8;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.card span {
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ==========================================
+
+   SEARCH BOX
+
+\========================================== */
+
+
+
+.search-box {
+
+    position: sticky;
+
+    top: 20px;
+
+    z-index: 100;
+
+    margin: 30px 0;
+
+}
+
+
+
+.search-box i {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+}
+
+
+
+.search-box input {
+
+    width: 100%;
+
+    padding: 18px 20px 18px 55px;
+
+    border: 1px solid transparent;
+
+    outline: none;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    font-size: 17px;
+
+    transition: .3s;
+
+}
+
+
+
+.search-box input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+
+.search-box input:focus {
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 20px rgba(59, 130, 246, .3);
+
+}
+
+
+
+/* ==========================================
+
+   CATEGORY CONTAINER
+
+\========================================== */
+
+
+
+\#categories {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+}
+
+
+
+/* ==========================================
+
+   CATEGORY CARD
+
+\========================================== */
+
+
+
+.category {
+
+    background: rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    animation: fadeUp .45s ease;
+
+}
+
+
+
+.category:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* ==========================================
+
+   CATEGORY HEADER
+
+\========================================== */
+
+
+
+.category-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 25px;
+
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #1e40af, #2563eb);
+
+    transition: .3s;
+
+}
+
+
+
+.category-header:hover {
+
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+
+}
+
+
+
+.category-header h2 {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+}
+
+
+
+.category-progress {
+
+    background: rgba(255, 255, 255, .15);
+
+    padding: 8px 15px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ==========================================
+
+   ARROW
+
+\========================================== */
+
+
+
+.arrow {
+
+    font-size: 18px;
+
+    transition: .35s;
+
+}
+
+
+
+.arrow.rotate {
+
+    transform: rotate(180deg);
+
+}
+
+
+
+/* ==========================================
+
+   PLACE LIST
+
+\========================================== */
+
+
+
+.place-list {
+
+    display: none;
+
+    padding: 20px;
+
+    animation: slideDown .35s ease;
+
+}
+
+
+
+.category.open .place-list {
+
+    display: block;
+
+}
+
+
+
+.category.open {
+
+    border: 1px solid rgba(59, 130, 246, .5);
+
+    box-shadow: 0 15px 40px rgba(37, 99, 235, .18);
+
+}
+
+
+
+/* ==========================================
+
+   PLACE ITEM
+
+\========================================== */
+
+
+
+.place-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    transition: .3s;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.place-item:hover {
+
+    background: rgba(255, 255, 255, .08);
+
+    transform: translateX(5px);
+
+}
+
+
+
+/* ==========================================
+
+   LEFT SIDE
+
+\========================================== */
+
+
+
+.place-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+
+/* ==========================================
+
+   CHECKBOX
+
+\========================================== */
+
+
+
+.place-left input {
+
+    width: 22px;
+
+    height: 22px;
+
+    accent-color: #22c55e;
+
+    cursor: pointer;
+
+    transform: scale(1.15);
+
+}
+
+
+
+/* ==========================================
+
+   PLACE INFO
+
+\========================================== */
+
+
+
+.place-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.place-info h4 {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* Visited place: no strikethrough */
+
+
+
+.place-info h4.completed {
+
+    text-decoration: none;
+
+    opacity: 1;
+
+}
+
+
+
+.place-info p {
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+}
+
+
+
+/* Keep compatibility with the existing JavaScript */
+
+
+
+.completed {
+
+    text-decoration: none !important;
+
+    opacity: 1 !important;
+
+}
+
+
+
+/* ==========================================
+
+   GOOGLE MAP BUTTON
+
+\========================================== */
+
+
+
+.map-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+
+
+.map-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+
+/* ==========================================
+
+   FOOTER
+
+\========================================== */
+
+
+
+footer {
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+
+
+/* ==========================================
+
+   SCROLL TO TOP BUTTON
+
+\========================================== */
+
+
+
+\#scrollTop {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+
+    transition: .3s;
+
+    z-index: 999;
+
+}
+
+
+
+\#scrollTop:hover {
+
+    transform: translateY(-5px) scale(1.08);
+
+}
+
+
+
+/* ==========================================
+
+   ANIMATIONS
+
+\========================================== */
+
+
+
+@keyframes slideDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-12px);
+
+    }
+
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+
+   SCROLLBAR
+
+\========================================== */
+
+
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+    background: #0f172a;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #3b82f6;
+
+}
+
+
+
+/* ==========================================
+
+   RESPONSIVE
+
+\========================================== */
+
+
+
+@media (max-width: 900px) {
+
+
+
+    .container {
+
+        width: 95%;
+
+    }
+
+
+
+    header h1 {
+
+        font-size: 42px;
+
+    }
+
+
+
+    header p {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .progress-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .category-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+
+    .category-header h2 {
+
+        font-size: 21px;
+
+    }
+
+
+
+    .place-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+
+    .map-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+/* ==========================================
+
+   MOBILE
+
+\========================================== */
+
+
+
+@media (max-width: 600px) {
+
+
+
+    header h1 {
+
+        font-size: 34px;
+
+    }
+
+
+
+    header p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .card {
+
+        padding: 20px;
+
+    }
+
+
+
+    .card h2 {
+
+        font-size: 32px;
+
+    }
+
+
+
+    .progress-card {
+
+        padding: 18px;
+
+    }
+
+
+
+    .search-box input {
+
+        padding: 15px 15px 15px 50px;
+
+        font-size: 15px;
+
+    }
+
+
+
+    .category-header {
+
+        padding: 18px;
+
+    }
+
+
+
+    .place-item {
+
+        padding: 12px;
+
+    }
+
+
+
+    .place-info h4 {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .place-info p {
+
+        font-size: 13px;
+
+    }
+
+
+
+    #scrollTop {
+
+        width: 48px;
+
+        height: 48px;
+
+        right: 18px;
+
+        bottom: 18px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+
+   LARGE SCREENS
+
+\========================================== */
+
+
+
+@media (min-width: 1400px) {
+
+
+
+    .container {
+
+        max-width: 1350px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+
+   TEXT SELECTION
+
+\========================================== */
+
+
+
+::selection {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   SMART SPIRITUAL ROUTE FINDER
+========================================== */
+.trip-planner {
+  margin: 34px 0 38px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(212, 175, 95, .32);
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, .92), rgba(13, 27, 51, .88));
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .22);
+  overflow: hidden;
+}
+.planner-heading { max-width: 780px; margin-bottom: 25px; }
+.planner-eyebrow { color: #e9c878; font-size: 12px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
+.planner-eyebrow i { margin-right: 7px; }
+.planner-heading h2 { font-size: clamp(25px, 3vw, 36px); line-height: 1.2; margin-bottom: 10px; }
+.planner-heading p { color: #cbd5e1; line-height: 1.7; font-size: 14px; }
+.trip-form { display: grid; grid-template-columns: 1fr 1fr .65fr auto; gap: 13px; align-items: end; }
+.trip-form label { display: flex; flex-direction: column; gap: 8px; color: #e2e8f0; font-size: 13px; font-weight: 600; }
+.trip-form input, .trip-form select { width: 100%; min-width: 0; padding: 13px 14px; border: 1px solid rgba(203, 213, 225, .2); border-radius: 12px; outline: none; color: #f8fafc; background: rgba(255,255,255,.07); font: inherit; font-size: 14px; }
+.trip-form input:focus, .trip-form select:focus { border-color: #e9c878; box-shadow: 0 0 0 3px rgba(233, 200, 120, .12); }
+.trip-form select option { color: #0f172a; }
+.planner-submit, .planner-map-btn { border: 0; border-radius: 12px; padding: 14px 17px; color: #182033; background: linear-gradient(135deg, #f3d98d, #d8ad54); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: transform .2s ease, filter .2s ease; }
+.planner-submit:hover, .planner-map-btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.trip-results { margin-top: 25px; }
+.planner-empty { display: flex; gap: 12px; align-items: center; color: #cbd5e1; padding: 18px; border: 1px dashed rgba(203,213,225,.25); border-radius: 14px; font-size: 14px; }
+.planner-empty i { color: #e9c878; font-size: 22px; }
+.trip-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+.trip-summary h3 { font-size: 19px; }
+.trip-summary p { margin-top: 4px; color: #94a3b8; font-size: 12px; }
+.trip-stop-list { display: grid; gap: 10px; }
+.trip-stop { display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: center; padding: 14px; border-radius: 15px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.045); }
+.trip-stop-number { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(233,200,120,.14); color: #f3d98d; font-weight: 700; }
+.trip-stop h4 { font-size: 14px; margin-bottom: 3px; }
+.trip-stop p { color: #aebdce; font-size: 12px; line-height: 1.5; }
+.stop-tag { display: inline-block; margin-top: 6px; padding: 4px 7px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: .3px; }
+.stop-tag.route { color: #86efac; background: rgba(34,197,94,.12); }
+.stop-tag.detour { color: #fcd34d; background: rgba(245,158,11,.12); }
+.stop-tag.major { color: #fca5a5; background: rgba(239,68,68,.12); }
+.stop-check { display: flex; gap: 6px; align-items: center; color: #cbd5e1; font-size: 12px; cursor: pointer; }
+.stop-check input { accent-color: #d8ad54; }
+.trip-notice { margin-top: 15px; color: #cbd5e1; font-size: 12px; line-height: 1.7; padding: 13px 15px; border-left: 3px solid #d8ad54; background: rgba(233,200,120,.07); border-radius: 0 10px 10px 0; }
+.trip-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.planner-map-btn { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.planner-secondary { color: #e2e8f0; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); }
+@media (max-width: 1000px) { .trip-form { grid-template-columns: 1fr 1fr; } .planner-submit { min-height: 46px; } }
+@media (max-width: 600px) { .trip-planner { padding: 20px 15px; border-radius: 20px; } .trip-form { grid-template-columns: 1fr; } .trip-stop { grid-template-columns: 34px 1fr; } .trip-stop .stop-check { grid-column: 2; } .planner-submit { width: 100%; } }
+
+
+/* ==========================================
+   COLLAPSIBLE SPIRITUAL ROUTE FINDER
+========================================== */
+.planner-widget {
+  margin: 30px 0 34px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 154, 76, .36);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .045);
+  backdrop-filter: blur(15px);
+}
+.planner-toggle {
+  display: flex; align-items: center; gap: 15px; width: 100%; padding: 17px 20px;
+  border: 0; background: transparent; color: #fff; text-align: left; cursor: pointer;
+  font-family: inherit; transition: background .25s ease;
+}
+.planner-toggle:hover { background: rgba(255, 255, 255, .065); }
+.planner-toggle-icon {
+  display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px;
+  border-radius: 15px; color: #081229; font-size: 21px;
+  background: linear-gradient(135deg, #c59a4c, #f3d98d);
+}
+.planner-toggle-text { display: flex; flex: 1; flex-direction: column; gap: 3px; }
+.planner-toggle-text strong { font-size: 16px; font-weight: 600; }
+.planner-toggle-text small { color: #aebbd0; font-size: 12px; }
+.planner-arrow { color: #e9c878; transition: transform .25s ease; }
+.planner-toggle[aria-expanded="true"] .planner-arrow { transform: rotate(180deg); }
+#tripPlanner[hidden] { display: none !important; }
+.planner-widget .trip-planner { margin: 0; border: 0; border-top: 1px solid rgba(255,255,255,.08); border-radius: 0; box-shadow: none; animation: plannerReveal .25s ease; }
+@keyframes plannerReveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .planner-toggle { padding: 14px; gap: 11px; }
+  .planner-toggle-icon { flex-basis: 42px; width: 42px; height: 42px; font-size: 18px; }
+  .planner-toggle-text strong { font-size: 14px; }
+  .planner-toggle-text small { font-size: 11px; }
+}
+
+/* Car-route controls */
+.car-route-segments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.car-route-segments h4 {
+  flex-basis: 100%;
+  margin: 0 0 2px;
+  color: var(--text-primary, #f4f7ff);
+  font-size: 1rem;
+}
+.car-route-segments .trip-notice {
+  flex-basis: 100%;
+  margin: 0;
+}
+.car-route-segments .planner-map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .car-route-segments .planner-map-btn,
+  .trip-actions > .planner-map-btn {
+    width: 100%;
+  }
+}
